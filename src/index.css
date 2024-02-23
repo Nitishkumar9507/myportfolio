@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-slate-800
+}
+/* Button */
+
+.rounded-btn {
+  @apply rounded-tl-full flex rounded-br-full px-8 py-2 m-2 bg-cyan-500 text-white transition duration-300 transform hover:tilt-shaking;
+}
+.rounded-btn img{
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hover\:tilt-shaking:hover {
+  animation: tilt-shaking 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) both 3;
+}
+/* Navbar animation */
+
+.nav-item {
+  @apply relative cursor-pointer;
+}
+
+/* Underline animation */
+.nav-item::before {
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 transition-transform duration-300 origin-left;
+  content: '';
+}
+
+.nav-item:hover::before {
+  @apply scale-x-100;
+}
+/* ImageFlip */
+
+.flip-container {
+  position: relative;
+  width:100%;
+  height: 100%;
+  perspective: 1000px; /*  Add 3D perspective */
+}
+
+.flipper {
+  transition: transform  0.5s;
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+  width: 100%;
+  height: 100%;
+}
+
+.front,
+.back {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden; /* Hide backface of the element */
+}
+
+.front img,
+.back img {
+  max-width: 100%;
+  max-height: 100%;
+  /* object-fit: cover; */
+}
+
+.back {
+  transform: rotateY(180deg); /* Rotate the back face */
+}
+
+.flip-container:hover .back {
+  transform: rotateY(0deg); /* Rotate on hover */
+}
+
+/* Animation on hover */
+.flip-container:hover .flipper {
+  transform: rotateY(180deg); /* Rotate on hover */
+}
+
+/* circular progress animation*/
+@keyframes progress {
+  to {
+    stroke-dashoffset: 250;
+  }
+}
+
+.animate-progress {
+  animation: progress 1s ease-in-out reverse ;
+}
+/* MouseTracker */
+.mouse-tracker {
+  position: relative;
+  overflow: hidden;
+}
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 900;
+  /* transition: 0.5s; */
+}
+
+/*  typing animation  */
+.wrapper{
+  color: white;
+  font-size: 2rem;
+}
+.wrapper .static-text {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 500;
+}
+.description{
+  font-size: large;
+  margin: 15px 0;
+  text-align: justify;
+  width: 80%;
+}
+.hello{
+  color: cyan;
+  font-family: cursive;
+}
+.wrapper .dynamic-text {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-text li {
+  color: yellow;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 8s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+
+.dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background-color: black;
+  border-left: 2px solid;
+  animation: typing 2s steps(10) infinite;
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 55px;
+  }
+}
+
+/* ------- footer ----  */
+.footerRadious{
+  border-top-left-radius: 50% 40px;
+  border-top-right-radius: 50% 40px;
+}
