@@ -3,7 +3,7 @@ import image from "../assets/nitish_photo.jpeg";
 
 const Forms = () => {
   return (
-    <div className="flex items-center bg-slate-800 justify-center min-h-screen bg-cover bg-center bg-blur-10" >
+    <div className="flex items-center justify-center min-h-screen bg-cover  m-2 sm:m-0  bg-center bg-blur-10" >
       <div className="bg-white bg-opacity-30 w-full md:w-[50%] p-8 rounded-md">
         <div className="flex items-center justify-center mb-6">
           <img src={image} alt="Image" className="w-16 h-16 rounded-full" />
