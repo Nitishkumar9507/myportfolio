@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  @apply bg-slate-800
+  @apply bg-slate-800 text-[20px]
 }
 /* Button */
 
@@ -126,39 +126,12 @@ body{
 }
 
 /*  typing animation  */
-.wrapper{
-  color: white;
-  font-size: 2rem;
-}
-.wrapper .static-text {
-  color: #fff;
-  font-size: 60px;
-  font-weight: 500;
-}
-.description{
-  font-size: large;
-  margin: 15px 0;
-  text-align: justify;
-  width: 80%;
-}
-.hello{
-  color: cyan;
-  font-family: cursive;
-}
-.wrapper .dynamic-text {
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
-}
+
 .dynamic-text li {
-  color: yellow;
-  list-style: none;
-  font-size: 60px;
-  font-weight: 500;
-  position: relative;
-  top: 0;
+  /* font-size: 60px; */
   animation: slide 8s steps(4) infinite;
 }
+
 @keyframes slide {
   100% {
     top: -360px;
@@ -191,3 +164,5 @@ body{
   border-top-left-radius: 50% 40px;
   border-top-right-radius: 50% 40px;
 }
+
+/* --- responsiveness--  */

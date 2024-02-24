@@ -3,33 +3,36 @@ import download from '../assets/download.png'
 
 function Typing() {
   return (
-    <div>
-      <div class="wrapper">
+    <div className="">
+      <div class="wrapper h-[50vh] text-white text-[1em] sm:text-[2em]">
         <h1>
-          Hello<span className="hello">__</span> <br />
-          Myself <span className="hello">Nitish Kumar</span>
+          Hello<span className="text-cyan-400">__</span> <br />
+          Myself <span className="text-cyan-400 font-[cursive] ">Nitish Kumar</span>
         </h1>
-        <div class="static-text">I'm a</div>
-        <ul class="dynamic-text">
-          <li>
+        <div class="static-text text-[2em] font-semibold">I'm a</div>
+        <ul class="dynamic-text h-[90px] leading-[90px] overflow-hidden ">
+          <li className="text-yellow-400 list-none font-semibold relative top-0 text-[50px] sm:text-[2.5em]  ">
             <span>Web Developer</span>
           </li>
-          <li>
+          <li className="text-yellow-400 list-none font-semibold relative top-0 text-[50px] sm:text-[2.5em]  ">
             <span>Frontend Developer</span>
           </li>
-          <li>
+          <li className="text-yellow-400 list-none font-semibold relative top-0 text-[50px] sm:text-[2.5em]  ">
             <span>React Developer</span>
           </li>
-          <li>
+          <li className="text-yellow-400 list-none font-semibold relative top-0 text-[50px] sm:text-[2.5em]  ">
             <span>Enthusiastic Dev</span>
           </li>
         </ul>
-        <div className="description">
+        <div className="description hidden sm:block sm:mt-3 sm:mb-3 text-justify font-[1em] w-full sm:w-[80%] ">
           Hey there! Welcome to my portfolio! I'm a frontend developer who loves
           creating awesome websites. I focus on making things look great and
-          work smoothly, with a strong foundation in the latest web technologies. Take a look around to learn more about me and my work.
+          work smoothly, with a strong foundation in the latest web technologies. Take a look around to know more about me and my work.
         </div>
-        <div className="flex items-end justify-center "><button className=" rounded-btn">Resume <img src={download} alt="" /></button></div>
+        <div className="description mt-1 mb-1 text-justify font-[1em] w-full sm:hidden block ">
+          Hey there! Welcome to my portfolio! I'm a fronteend developer, with a strong foundation in latest web technologies. Take a look around to know more about me and my work.
+        </div>
+        <div className="flex items-center justify-center "><button className=" rounded-btn">Resume <img src={download} alt="" /></button></div>
       </div>
     </div>
   );
