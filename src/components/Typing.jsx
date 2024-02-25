@@ -29,7 +29,7 @@ function Typing() {
           creating awesome websites. I focus on making things look great and
           work smoothly, with a strong foundation in the latest web technologies. Take a look around to know more about me and my work.
         </div>
-        <div className="description mt-1 mb-1 text-justify text-[.75em] w-full sm:hidden block ">
+        <div className="description mt-1 mb-1 text-justify text-[.60em] w-full sm:hidden block ">
           Hey there! Welcome to my portfolio! I'm a fronteend developer, with a strong foundation in latest web technologies. Take a look around to know more about me and my work.
         </div>
       </div>
