@@ -8,11 +8,12 @@ body{
 /* Button */
 
 .rounded-btn {
-  @apply rounded-tl-full flex rounded-br-full px-8 py-2 m-2 bg-cyan-500 text-white transition duration-300 transform hover:tilt-shaking;
+  @apply rounded-tl-full flex items-center justify-center rounded-br-full px-8 py-2 m-2 bg-cyan-500 text-white transition duration-300 transform hover:tilt-shaking;
 }
 .rounded-btn img{
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  /* background-color: yellow; */
+  width: 30px;
 }
 
 @keyframes tilt-shaking {
@@ -127,16 +128,32 @@ body{
 
 /*  typing animation  */
 
-.dynamic-text li {
+/* .dynamic-text li {
   /* font-size: 60px; */
-  animation: slide 8s steps(4) infinite;
-}
+  /* animation: slide 8s steps(4) infinite;
+} */ 
 
-@keyframes slide {
-  100% {
-    top: -360px;
+@media (min-width: 768px) {
+  .dynamic-text li {
+    animation: slide 8s steps(4) infinite;
+  }
+  .dynamic-text li span::after{
+    animation: typing 2s steps(10) infinite;
+    height: 90px;/*90-60*/
   }
 }
+
+@media (max-width: 767px) {
+  .dynamic-text li {
+    animation: mobileslide 8s steps(4) infinite; /* Define your mobileslide animation here */;
+  }
+  .dynamic-text li span::after{
+    animation: mobiletyping 2s steps(10) infinite;
+    height: 60px;/*90-60*/
+  }
+}
+
+
 
 .dynamic-text li span {
   position: relative;
@@ -146,16 +163,33 @@ body{
   content: "";
   position: absolute;
   left: 0;
-  height: 90px;
+  /* height: 60px;90-60 */
   width: 100%;
   background-color: black;
   border-left: 2px solid;
-  animation: typing 2s steps(10) infinite;
+  /* z-index:1; */
+  /* animation: typing 2s steps(10) infinite; */
 }
 @keyframes typing {
   100% {
     left: 100%;
-    margin: 0 -35px 0 55px;
+    margin: 0 -35px 0 70px;/*cc 55 -26*/
+  }
+}
+@keyframes slide {
+  100% {
+    top: -360px;/*360-240*/
+  }
+}
+@keyframes mobiletyping {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 46px;/*cc 55 -26*/
+  }
+}
+@keyframes mobileslide {
+  100% {
+    top: -240px;/*360-240*/
   }
 }
 
