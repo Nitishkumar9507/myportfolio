@@ -1,10 +1,13 @@
 import React from "react";
 import download from '../assets/download.png'
+import instagram from '../assets/instagram.png'
+import linkedIn from '../assets/linkedin.png'
+import github from '../assets/github.svg'
 
 function Typing() {
   return (
     <div className="">
-      <div class="wrapper h-[50vh] text-white text-[1.5em] sm:text-[2em]">
+      <div class="wrapper h-[50vh] hidden sm:block text-white text-[1.5em] sm:text-[2em]">
         <h1>
           Hello<span className="text-cyan-400">__</span> <br />
           Myself <span className="text-cyan-400 font-[cursive] ">Nitish Kumar</span>
@@ -24,13 +27,10 @@ function Typing() {
             <span>Enthusiastic Dev</span>
           </li>
         </ul>
-        <div className="description hidden sm:block sm:mt-3 sm:mb-3 text-justify text-[0.5em] w-full sm:w-[80%] ">
-          Hey there! Welcome to my portfolio! I'm a frontend developer who loves
-          creating awesome websites. I focus on making things look great and
-          work smoothly, with a strong foundation in the latest web technologies. Take a look around to know more about me and my work.
-        </div>
-        <div className="description mt-1 mb-1 text-justify text-[.60em] w-full sm:hidden block ">
-          Hey there! Welcome to my portfolio! I'm a fronteend developer, with a strong foundation in latest web technologies. Take a look around to know more about me and my work.
+        <div className="description h-10 mt-10 flex items-center justify-center gap-8 w-full ">
+          <a href="https://github.com/Nitishkumar9507" className=" bg-white rounded h-10 w-10"><img src={github} alt="" /></a>
+          <a href="https://www.linkedin.com/in/nitish-kumar-a84249229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className=" bg-white rounded h-10 w-10"><img src={linkedIn} alt="" /></a>
+          <a href="https://www.instagram.com/nitishkr9507/?utm_source=qr&igsh=MXU5c3JkNW81bmJ6" className=" bg-white rounded h-10 w-10"><img src={instagram} alt="" /></a>
         </div>
       </div>
     </div>

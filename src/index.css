@@ -200,3 +200,8 @@ body{
 }
 
 /* --- responsiveness--  */
+
+/* Education  */
+.sidebar h3{@apply bg-red-300 font-semibold text-2xl h-10 rounded-full border ml-5 cursor-pointer mr-5 flex justify-center items-center border-amber-200
+}
+table{@apply  h-full text-xl font-bold }
